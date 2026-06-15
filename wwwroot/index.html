@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sigma JWT Embed</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="controls" aria-label="Embed user controls">
+      <div>
+        <h1>Sigma JWT Embed</h1>
+        <p>Server-generated JWT, client-rendered iframe.</p>
+      </div>
+
+      <form id="embed-form">
+        <label>
+          Email
+          <input name="email" type="email" value="viewer@example.com">
+        </label>
+        <label>
+          External user ID
+          <input name="externalUserId" value="viewer-123">
+        </label>
+        <label>
+          Teams
+          <input name="teams" value="Customers">
+        </label>
+        <label>
+          Region attribute
+          <input name="ua_region" value="West">
+        </label>
+        <button type="submit">Load Embed</button>
+      </form>
+
+      <pre id="status" aria-live="polite">Ready.</pre>
+    </section>
+
+    <section class="embed-frame" aria-label="Sigma embed">
+      <iframe
+        id="sigma-iframe"
+        title="Sigma embedded workbook"
+        allow="fullscreen"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
+
